@@ -104,3 +104,22 @@ button_wh.addEventListener("click", function() {
  console.log(`Ширина: ${rect.width}
 Высота: ${rect.height}`);
 });
+
+// Дополнительное задание. Создайте простую форму с полями ввода (например, имя, email) и кнопкой отправки. Подсказка: При нажатии на кнопку проверяйте, чтобы все поля были заполнены, используя if -условия. Для получения значений полей используйте .value. Выведите сообщение, если какое-то из полей пустое.
+
+// Найдём кнопку отправки
+let submit_button = document.querySelector("#submit");
+submit_button.addEventListener("click", function() {
+ // Найдём поля ввода
+ let name_field = document.querySelector("#name").value;
+ let email_field = document.querySelector("#email").value;
+
+ // Проверим, заполнены ли поля
+ if (name_field === ""   || email_field === "") {
+  console.log("Заполните все поля!");
+  return;
+  }
+// Выведем сообщение, если поля заполнены
+console.log(`Имя: ${name_field}
+  Email: ${email_field}`);
+  });
